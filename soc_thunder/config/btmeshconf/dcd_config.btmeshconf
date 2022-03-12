@@ -7,11 +7,24 @@
       {
         "name": "Main",
         "location": "0x0000",
-        "sig_models" : [
-          {"mid":"0x0000", "name":"Configuration Server"},
-          {"mid":"0x0002", "name":"Health Server"}
+        "sig_models": [
+          {
+            "mid": "0x0000",
+            "name": "Configuration Server"
+          },
+          {
+            "mid": "0x0002",
+            "name": "Health Server"
+          }
+        ],
+        "vendor_models": [
+          {
+            "name": "Vendor Model 0",
+            "mid": "0xabcd",
+            "cid": "0x02ff"
+          }
         ]
       }
     ]
   }
-} 
+}

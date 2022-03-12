@@ -740,26 +740,26 @@
       </folder>
     </folder>
   </folder>
-  <file name="app.c" linked="false" uri="studio:/sdk/app/bluetooth/example/soc_btmesh_light/app.c"/>
-  <file name="app_led_rgb.c" linked="false" uri="studio:/sdk/app/bluetooth/example/soc_btmesh_light/app_led_rgb.c"/>
-  <file name="app_out_log.c" linked="false" uri="studio:/sdk/app/bluetooth/example/soc_btmesh_light/app_out_log.c"/>
-  <file name="local_cli_commands.c" linked="false" uri="studio:/sdk/app/bluetooth/example/soc_btmesh_light/local_cli_commands.c"/>
-  <file name="main.c" linked="false" uri="studio:/sdk/app/bluetooth/example/soc_btmesh_light/main.c"/>
-  <file name="rgbled.c" linked="false" uri="studio:/sdk/app/bluetooth/example/soc_btmesh_light/rgbled.c"/>
-  <file name="app.h" linked="false" uri="studio:/sdk/app/bluetooth/example/soc_btmesh_light/app.h"/>
-  <file name="app_led.h" linked="false" uri="studio:/sdk/app/bluetooth/example/soc_btmesh_light/app_led.h"/>
-  <file name="board_4166a.h" linked="false" uri="studio:/sdk/app/bluetooth/example/soc_btmesh_light/board_4166a.h"/>
-  <file name="create_bl_files.bat" linked="false" uri="studio:/sdk/app/bluetooth/script/create_bl_files.bat"/>
-  <file name="create_bl_files.sh" linked="false" uri="studio:/sdk/app/bluetooth/script/create_bl_files.sh"/>
-  <file name="readme_img0.png" linked="false" uri="studio:/sdk/app/bluetooth/documentation/example/soc_btmesh_light/readme_img0.png"/>
-  <file name="readme_img1.png" linked="false" uri="studio:/sdk/app/bluetooth/documentation/example/soc_btmesh_light/readme_img1.png"/>
-  <file name="readme_img2.png" linked="false" uri="studio:/sdk/app/bluetooth/documentation/example/soc_btmesh_light/readme_img2.png"/>
-  <file name="readme_img3.png" linked="false" uri="studio:/sdk/app/bluetooth/documentation/example/soc_btmesh_light/readme_img3.png"/>
-  <file name="readme_img4.png" linked="false" uri="studio:/sdk/app/bluetooth/documentation/example/soc_btmesh_light/readme_img4.png"/>
-  <file name="readme_img5.png" linked="false" uri="studio:/sdk/app/bluetooth/documentation/example/soc_btmesh_light/readme_img5.png"/>
-  <file name="readme_img6.png" linked="false" uri="studio:/sdk/app/bluetooth/documentation/example/soc_btmesh_light/readme_img6.png"/>
-  <file name="readme_img7.png" linked="false" uri="studio:/sdk/app/bluetooth/documentation/example/soc_btmesh_light/readme_img7.png"/>
-  <file name="readme_img8.png" linked="false" uri="studio:/sdk/app/bluetooth/documentation/example/soc_btmesh_light/readme_img8.png"/>
+  <file name="app.c" linked="false" uri="studio:/project/app.c"/>
+  <file name="app_led_rgb.c" linked="false" uri="studio:/project/app_led_rgb.c"/>
+  <file name="app_out_log.c" linked="false" uri="studio:/project/app_out_log.c"/>
+  <file name="local_cli_commands.c" linked="false" uri="studio:/project/local_cli_commands.c"/>
+  <file name="main.c" linked="false" uri="studio:/project/main.c"/>
+  <file name="rgbled.c" linked="false" uri="studio:/project/rgbled.c"/>
+  <file name="app.h" linked="false" uri="studio:/project/app.h"/>
+  <file name="app_led.h" linked="false" uri="studio:/project/app_led.h"/>
+  <file name="board_4166a.h" linked="false" uri="studio:/project/board_4166a.h"/>
+  <file name="create_bl_files.bat" linked="false" uri="studio:/project/create_bl_files.bat"/>
+  <file name="create_bl_files.sh" linked="false" uri="studio:/project/create_bl_files.sh"/>
+  <file name="readme_img0.png" linked="false" uri="studio:/project/readme_img0.png"/>
+  <file name="readme_img1.png" linked="false" uri="studio:/project/readme_img1.png"/>
+  <file name="readme_img2.png" linked="false" uri="studio:/project/readme_img2.png"/>
+  <file name="readme_img3.png" linked="false" uri="studio:/project/readme_img3.png"/>
+  <file name="readme_img4.png" linked="false" uri="studio:/project/readme_img4.png"/>
+  <file name="readme_img5.png" linked="false" uri="studio:/project/readme_img5.png"/>
+  <file name="readme_img6.png" linked="false" uri="studio:/project/readme_img6.png"/>
+  <file name="readme_img7.png" linked="false" uri="studio:/project/readme_img7.png"/>
+  <file name="readme_img8.png" linked="false" uri="studio:/project/readme_img8.png"/>
   <file name="readme.md" linked="false" uri="studio:/sdk/app/bluetooth/documentation/example/soc_btmesh_light/readme.md"/>
   <includePath uri="studio:/project/"/>
   <includePath uri="studio:/sdk/platform/Device/SiliconLabs/EFR32MG12P/Include"/>

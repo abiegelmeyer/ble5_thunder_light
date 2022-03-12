@@ -29,9 +29,9 @@ component:
 - {id: btmesh_factory_reset}
 - instance: [btn0, btn1]
   id: simple_button
-- {id: btmesh_event_log}
 - instance: [example]
   id: cli
+- {id: btmesh_event_log}
 - {id: brd4166a}
 - {id: btmesh_ctl_server}
 - {id: simple_timer}
@@ -42,11 +42,13 @@ component:
 - {id: rail_util_pti}
 - {id: btmesh_scheduler_server}
 - {id: btmesh_feature_relay}
+- {id: btmesh_feature_vendor_model}
 - {id: btmesh_proxy}
 - {id: btmesh_time_server}
 - {id: app_log}
 - instance: [vcom]
   id: iostream_usart
+- {id: btmesh_feature_test}
 - {id: btmesh_friend}
 - {id: btmesh_provisioning_decorator}
 - {id: btmesh_lc_server}
@@ -70,7 +72,6 @@ other_file:
 - {path: readme_img6.png}
 - {path: readme_img7.png}
 - {path: readme_img8.png}
-config_file: []
 template_contribution:
 - condition: [cli]
   name: cli_command

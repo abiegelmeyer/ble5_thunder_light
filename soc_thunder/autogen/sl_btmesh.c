@@ -28,7 +28,9 @@ static const struct sli_bgapi_class * const btmesh_class_table[] =
   SL_BTMESH_BGAPI_CLASS(scene_server),
   SL_BTMESH_BGAPI_CLASS(scene_setup_server),
   SL_BTMESH_BGAPI_CLASS(scheduler_server),
+  SL_BTMESH_BGAPI_CLASS(test),
   SL_BTMESH_BGAPI_CLASS(time_server),
+  SL_BTMESH_BGAPI_CLASS(vendor_model),
   SL_BTMESH_BGAPI_CLASS(node),
   NULL
 };

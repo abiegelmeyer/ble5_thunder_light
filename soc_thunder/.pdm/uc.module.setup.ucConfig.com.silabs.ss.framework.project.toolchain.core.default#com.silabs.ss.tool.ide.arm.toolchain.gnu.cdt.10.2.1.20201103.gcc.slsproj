@@ -3,7 +3,7 @@
   <folder name="config">
     <folder name="btconf">
       <file name="gatt_service_mesh_proxy.xml" generated="true" linked="false" uri="studio:/sdk/protocol/bluetooth/component/gatt_service_mesh_proxy.xml"/>
-      <file name="gatt_configuration.btconf" generated="true" linked="false" uri="studio:/sdk/app/bluetooth/example/soc_btmesh_light/gatt_configuration.btconf"/>
+      <file name="gatt_configuration.btconf" generated="true" linked="false" uri="studio:/sdk/app/bluetooth/common/gatt_configuration/gatt_configuration.btconf"/>
       <file name="gatt_service_mesh_prov.xml" generated="true" linked="false" uri="studio:/sdk/protocol/bluetooth/component/gatt_service_mesh_prov.xml"/>
       <file name="gatt_service_mesh_default.xml" generated="true" linked="false" uri="studio:/sdk/protocol/bluetooth/component/gatt_service_mesh_default.xml"/>
       <file name="ota_dfu.xml" generated="true" linked="false" uri="studio:/sdk/app/bluetooth/common/ota_dfu/ota_dfu.xml"/>
@@ -14,7 +14,7 @@
       <file name="btmesh_lighting_server.dcd" generated="true" linked="false" uri="studio:/sdk/app/bluetooth/common/btmesh_lighting_server/btmesh_lighting_server.dcd"/>
       <file name="btmesh_scheduler_server.dcd" generated="true" linked="false" uri="studio:/sdk/app/bluetooth/common/btmesh_scheduler_server/btmesh_scheduler_server.dcd"/>
       <file name="btmesh_time_server.dcd" generated="true" linked="false" uri="studio:/sdk/app/bluetooth/common/btmesh_time_server/btmesh_time_server.dcd"/>
-      <file name="dcd_config.btmeshconf" generated="true" linked="false" uri="studio:/sdk/app/bluetooth/example/soc_btmesh_light/dcd_config.btmeshconf"/>
+      <file name="dcd_config.btmeshconf" generated="true" linked="false" uri="studio:/sdk/app/bluetooth/common/btmesh_dcd_configuration/dcd_config.btmeshconf"/>
       <file name="btmesh_lc_server.dcd" generated="true" linked="false" uri="studio:/sdk/app/bluetooth/common/btmesh_lc_server/btmesh_lc_server.dcd"/>
     </folder>
     <file name="sl_memory_config.h" generated="true" linked="false" uri="studio:/project/config/sl_memory_config.h"/>

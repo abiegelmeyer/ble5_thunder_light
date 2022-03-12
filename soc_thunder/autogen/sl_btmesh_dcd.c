@@ -42,7 +42,7 @@ const uint8_t __mesh_dcd[] = {
   /* Main */
     U16TOA(0x0000), /* Location */
     0x11, /* Number of SIG Models = 17 */
-    0x00, /* Number of Vendor Models = 0 */
+    0x01, /* Number of Vendor Models = 1 */
     /* SIG Models */
       U16TOA(0x0000), /* Configuration Server */
       U16TOA(0x0002), /* Health Server */
@@ -61,6 +61,8 @@ const uint8_t __mesh_dcd[] = {
       U16TOA(0x1207), /* Scheduler Setup Server */
       U16TOA(0x1200), /* Time Server */
       U16TOA(0x1201), /* Time Setup Server */
+    /* Vendor Models */
+      U16TOA(0x02ff), U16TOA(0xabcd), /* Vendor Model 0 */
   /* Temperature */
     U16TOA(0x0000), /* Location */
     0x02, /* Number of SIG Models = 2 */

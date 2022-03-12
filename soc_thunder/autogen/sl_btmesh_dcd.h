@@ -29,7 +29,7 @@
 
 // Defines the maximum number of models the application needs based on the
 // btmeshconf and dcd files.
-#define SL_BTMESH_CONFIG_MAX_MODELS 22
+#define SL_BTMESH_CONFIG_MAX_MODELS 23
 
 #define BTMESH_CTL_SERVER_MAIN 0
 #define BTMESH_LIGHTING_SERVER_MAIN 0
@@ -39,5 +39,7 @@
 #define BTMESH_CTL_SERVER_TEMPERATURE 1
 #define BTMESH_LC_SERVER_LIGHT_LC 2
 
+#define VENDOR_MODEL_0_CID 0x02ff
+#define VENDOR_MODEL_0_MID 0xabcd
 
 #endif // SL_BTMESH_DCD_H
