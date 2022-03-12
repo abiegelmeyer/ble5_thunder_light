@@ -1,0 +1,104 @@
+# Silicon Labs Project Configuration Tools: slcp, v0, Component selection file.
+project_name: soc_thunder
+label: soc_thunder
+description: |
+  This example is an out-of-the-box Software Demo where the LEDs of the  Thunderboard Sense 2 can be controlled by push button presses on another  device (soc_btmesh_switch). Beside switching on and off the LEDs, their  lighting intensity, color temperature and delta UV can also be set. The  example is based on the Bluetooth Mesh Generic On/Off Model, the Light  Lightness Model, CTL Model and LC Model. This example requires Internal Storage Bootloader (single image on 1MB device).
+category: Bluetooth Mesh Examples
+package: Btmesh
+quality: production
+readme:
+- {path: ../../../../../SimplicityStudio/SDKs/gecko_sdk1/app/bluetooth/documentation/example/soc_btmesh_light/readme.md}
+source:
+- {path: app.c}
+- {path: app_led_rgb.c}
+- {path: app_out_log.c}
+- {path: local_cli_commands.c}
+- {path: main.c}
+- {path: rgbled.c}
+tag: ['hardware:component:button:2+', 'hardware:component:led:2+', prebuilt_demo,
+  'hardware:rf:band:2400', 'hardware:device:sdid:!215', 'hardware:board_only', 'hardware:device:sdid:!205']
+include:
+- path: ''
+  file_list:
+  - {path: app.h}
+  - {path: app_led.h}
+  - {path: board_4166a.h}
+sdk: {id: gecko_sdk, version: 4.0.1}
+toolchain_settings: []
+component:
+- {id: btmesh_factory_reset}
+- instance: [btn0, btn1]
+  id: simple_button
+- {id: btmesh_event_log}
+- instance: [example]
+  id: cli
+- {id: brd4166a}
+- {id: btmesh_ctl_server}
+- {id: simple_timer}
+- {id: btmesh_scene_server}
+- {id: mpu}
+- {id: btmesh_lighting_server}
+- {id: btmesh_feature_gatt_prov_bearer}
+- {id: rail_util_pti}
+- {id: btmesh_scheduler_server}
+- {id: btmesh_feature_relay}
+- {id: btmesh_proxy}
+- {id: btmesh_time_server}
+- {id: app_log}
+- instance: [vcom]
+  id: iostream_usart
+- {id: btmesh_friend}
+- {id: btmesh_provisioning_decorator}
+- {id: btmesh_lc_server}
+- {id: btmesh_stack}
+- {id: bluetooth_feature_system}
+- instance: [led_rgb]
+  id: simple_rgbw_pwm_led
+- {id: ota_dfu}
+- {id: bootloader_interface}
+- {id: app_assert}
+- {id: btmesh_generic_base}
+other_file:
+- {path: create_bl_files.bat}
+- {path: create_bl_files.sh}
+- {path: readme_img0.png}
+- {path: readme_img1.png}
+- {path: readme_img2.png}
+- {path: readme_img3.png}
+- {path: readme_img4.png}
+- {path: readme_img5.png}
+- {path: readme_img6.png}
+- {path: readme_img7.png}
+- {path: readme_img8.png}
+config_file: []
+template_contribution:
+- condition: [cli]
+  name: cli_command
+  priority: 0
+  value: {name: info, handler: info, help: Prints info about BT address and mesh UUID}
+configuration:
+- {name: APP_LOG_LEVEL, value: APP_LOG_LEVEL_INFO}
+- {name: SL_BTMESH_LC_SERVER_PROPERTY_STATE_DEFAULT_ENABLE_CFG_VAL, value: '1'}
+- {name: SL_BTMESH_LC_SERVER_TIME_RUN_ON_DEFAULT_CFG_VAL, value: '2000'}
+- {name: SL_BTMESH_LC_SERVER_TIME_PROLONG_DEFAULT_CFG_VAL, value: '500'}
+- {name: SL_BTMESH_LC_SERVER_LIGHTNESS_ON_DEFAULT_CFG_VAL, value: '65535'}
+- {name: SL_BTMESH_LC_SERVER_LIGHTNESS_PROLONG_DEFAULT_CFG_VAL, value: '32767'}
+- {name: SL_BTMESH_LC_SERVER_LIGHTNESS_STANDBY_DEFAULT_CFG_VAL, value: '2000'}
+- {name: SL_BTMESH_LC_SERVER_AMBIENT_LUX_LEVEL_ON_DEFAULT_CFG_VAL, value: '1000'}
+- {name: SL_BTMESH_LC_SERVER_AMBIENT_LUX_LEVEL_PROLONG_DEFAULT_CFG_VAL, value: '500'}
+- {name: SL_BTMESH_LC_SERVER_AMBIENT_LUX_LEVEL_STANDBY_DEFAULT_CFG_VAL, value: '20'}
+- {name: SL_BOARD_ENABLE_DISPLAY, value: '1'}
+- condition: [iostream_usart]
+  name: SL_BOARD_ENABLE_VCOM
+  value: '1'
+- {name: SL_HEAP_SIZE, value: '0x5000'}
+- condition: [psa_crypto]
+  name: SL_PSA_KEY_USER_SLOT_COUNT
+  value: '0'
+- {name: SL_STACK_SIZE, value: '0x1000'}
+ui_hints:
+  highlight:
+  - {path: readme.md, focus: true}
+  - {path: config/btconf/gatt_configuration.btconf}
+  - {path: config/btmeshconf/dcd_config.btmeshconf}
+
