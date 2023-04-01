@@ -102,7 +102,7 @@ static aes_key_128 enc_key = {
 #define NET_KEY_IDX                 0
 #define APP_KEY_IDX                 0
 #define IVI                         0
-#define DEFAULT_TTL                 5
+#define DEFAULT_TTL                 9
 /* #define ELEMENT_ID                  0 */
 #endif /* #ifdef PROV_LOCALLY */
 
