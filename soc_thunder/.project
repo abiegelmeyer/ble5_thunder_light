@@ -811,11 +811,6 @@
 			<locationURI>STUDIO_SDK_LOC/app/common/util/app_assert/sl_app_assert.h</locationURI>
 		</link>
 		<link>
-			<name>gecko_sdk_4.0.1/app/common/util/app_log/app_log.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/common/util/app_log/app_log.c</locationURI>
-		</link>
-		<link>
 			<name>gecko_sdk_4.0.1/app/common/util/app_log/sl_app_log.h</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/app/common/util/app_log/sl_app_log.h</locationURI>

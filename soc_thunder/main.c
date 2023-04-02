@@ -39,6 +39,8 @@
 #include "sl_system_process_action.h"
 #endif // SL_CATALOG_KERNEL_PRESENT
 
+/* gravado na thunder relay MG12 (3 placas) */
+
 int main(void)
 {
   // Initialize Silicon Labs device, system, service(s) and protocol stack(s).
