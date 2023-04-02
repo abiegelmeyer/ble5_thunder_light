@@ -23,7 +23,7 @@
 typedef enum {
 	temperature_get = 0x1,
 	temperature_status,
-	unit_get,
+	per_test,
 	unit_set,
 	unit_set_unack,
 	unit_status,

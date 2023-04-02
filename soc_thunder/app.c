@@ -79,7 +79,7 @@ my_model_t my_model = {
     .opcodes_len = NUMBER_OF_OPCODES,
     .opcodes_data[0] = temperature_get,
     .opcodes_data[1] = temperature_status,
-    .opcodes_data[2] = unit_get,
+    .opcodes_data[2] = per_test,
     .opcodes_data[3] = unit_set,
     .opcodes_data[4] = unit_set_unack,
     .opcodes_data[5] = unit_status,
@@ -384,7 +384,9 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
  *
  * @param[in] evt Pointer to incoming event from the Bluetooth Mesh stack.
  ******************************************************************************/
-uint32_t contarx=0;
+uint32_t PER=0;
+uint8_t contarx=0;
+int8_t rssi_received;
 void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
 {
   sl_status_t sc;
@@ -523,17 +525,55 @@ void sl_btmesh_on_event(sl_btmesh_msg_t *evt)
       break;
 
     case sl_btmesh_evt_vendor_model_receive_id:
-      contarx++;
-      app_log("Vendor Model RECEBIDO!!! ...: %u\r\n", contarx);
+      //app_log("Vendor Model RECEBIDO!!! ...: %u\r\n", contarx);
 
-      if(evt->data.evt_vendor_model_receive.opcode == temperature_status)
-        {
-          app_log("Data[0]= : %u\r\n", evt->data.evt_vendor_model_receive.payload.data[0]);
-          app_log("Data[1]= : %u\r\n", evt->data.evt_vendor_model_receive.payload.data[1]);
-          app_log("Data[2]= : %u\r\n", evt->data.evt_vendor_model_receive.payload.data[2]);
-          app_log("Data[3]= : %u\r\n", evt->data.evt_vendor_model_receive.payload.data[3]);
+            if(evt->data.evt_vendor_model_receive.opcode == temperature_status)
+              {
+                app_log("Data[0]= : %u\r\n", evt->data.evt_vendor_model_receive.payload.data[0]);
+                app_log("Data[1]= : %u\r\n", evt->data.evt_vendor_model_receive.payload.data[1]);
+                app_log("Data[2]= : %u\r\n", evt->data.evt_vendor_model_receive.payload.data[2]);
+                app_log("Data[3]= : %u\r\n", evt->data.evt_vendor_model_receive.payload.data[3]);
 
-        }
+              }
+            else if(evt->data.evt_vendor_model_receive.opcode == per_test)
+              {
+                uint8_t contafromTX;
+                contafromTX = evt->data.evt_vendor_model_receive.payload.data[0];
+
+                /* PER Control */
+
+                if(contafromTX < contarx) /* aqui virou 255 para zero */
+                  {
+                    contafromTX += 255;
+                  }
+
+                PER += (contafromTX - contarx);
+                contarx = contafromTX;
+
+
+
+
+
+
+                uint32_t time_ms_fromTX;
+                time_ms_fromTX = evt->data.evt_vendor_model_receive.payload.data[1]<<24 | evt->data.evt_vendor_model_receive.payload.data[2]<<16 | evt->data.evt_vendor_model_receive.payload.data[3]<<8 | evt->data.evt_vendor_model_receive.payload.data[4];
+
+                sc = sl_btmesh_node_get_rssi(&rssi_received);
+                //app_log("Vendor Model Received Counter from TX=%u|Timestamp from TX=%u:%02u:%02u:%03u|Timestamp full from TX=%u|RSSI=%d|PER=%u\r\n",
+                app_log("Vendor Model Received Counter from TX=%u=Timestamp from TX=%u:%02u:%02u:%03u=Timestamp full from TX=%u=RSSI=%d=PER=%u\r\n",
+                        contafromTX,
+                        time_ms_fromTX / 3600000,
+                        (time_ms_fromTX / 60000) % 60,
+                        (time_ms_fromTX / 1000) % 60,
+                        (time_ms_fromTX % 1000),
+                        time_ms_fromTX,
+                        rssi_received,
+                        PER);
+
+
+
+                contarx++;
+              }
 
       break;
 
